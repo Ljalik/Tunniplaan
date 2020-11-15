@@ -12,6 +12,8 @@ namespace Tunniplaan
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
+        private bool taps;
+
         public Page1()
         {
             InitializeComponent();
@@ -211,11 +213,206 @@ namespace Tunniplaan
                         Grid.SetColumnSpan(r14, 3);
 
                         Content = abs;
+                        var tap = new TapGestureRecognizer();
 
+                        tap.Tapped += (s, e) =>
+                        {
+                            
+                            r13 = (Label)s;
+                            if (taps == true)
+                            {
+                                r13.FontSize = 10;
+                                r13.Text = "B144, S.Pesets.";
+                            }
+                            else
+                            {
+                                r13.FontSize = 20;
+                                r13.Text = "Keemia \n Biologia";
+                                taps = true;
+                            }
+                            
+                            r12 = (Label)s;
+                            if (taps == true)
+                            {
+                                r12.FontSize = 10;
+                                r12.Text = "B242, j.Voron.";
+                            }
+                            else
+                            {
+                                r12.FontSize = 20;
+                                r12.Text = "Inglise W.hald";
+                                taps = true;
+                            }
+                            
+                            r11 = (Label)s;
+                            if (taps == true)
+                            {
+                                r11.FontSize = 10;
+                                r11.Text = "A123, M.Agapov";
+                            }
+                            else
+                            {
+                                r11.FontSize = 20;
+                                r11.Text = "Võrgud ja Seadm.";
+                                taps = true;
+                            }
+                            
+                            r10 = (Label)s;
+                            if (taps == true)
+                            {
+                                r10.FontSize = 10;
+                                r10.Text = "A243, L.Shkarbanova";
+                            }
+                            else
+                            {
+                                r10.FontSize = 20;
+                                r10.Text = "W.paig.sead.";
+                                taps = true;
+                            }
+                            
+                            r9 = (Label)s;
+                            if (taps == true)
+                            {
+                                r9.FontSize = 10;
+                                r9.Text = "B144, S.Pesets.";
+                            }
+                            else
+                            {
+                                r9.FontSize = 20;
+                                r9.Text = "Keemia \n Biologia";
+                                taps = true;
+                            }
+                            
+                            r8 = (Label)s;
+                            if (taps == true)
+                            {
+                                r8.FontSize = 10;
+                                r8.Text = "B212, j.Skrul";
+                            }
+                            else
+                            {
+                                r8.FontSize = 20;
+                                r8.Text = "Transp.log.hut.";
+                                taps = true;
+                            }
+                            
+                            r7 = (Label)s;
+                            if (taps == true)
+                            {
+                                r7.FontSize = 10;
+                                r7.Text = "A243, L.Shkarbanova";
+                            }
+                            else
+                            {
+                                r7.FontSize = 20;
+                                r7.Text = "W.paig.sead.";
+                                taps = true;
+                            }
+                            
+                            r6 = (Label)s;
+                            if (taps == true)
+                            {
+                                r6.FontSize = 10;
+                                r6.Text = "B236, Alina";
+                            }
+                            else
+                            {
+                                r6.FontSize = 20;
+                                r6.Text = "Eesti keel \n teise kellena";
+                                taps = true;
+                            }
+                            
+                            r5 = (Label)s;
+                            if (taps == true)
+                            {
+                                r5.FontSize = 10;
+                                r5.Text = "B242, j.Voron.";
+                            }
+                            else
+                            {
+                                r5.FontSize = 20;
+                                r5.Text = "Inglise W.hald";
+                                taps = true;
+                            }
+                            
+                            r4 = (Label)s;
+                            if (taps == true)
+                            {
+                                r4.FontSize = 10;
+                                r4.Text = "B212, j.Skrul";
+                            }
+                            else
+                            {
+                                r4.FontSize = 20;
+                                r4.Text = "Transp.log.hut.";
+                                taps = true;
+                            }
+                            
+                            r2 = (Label)s;
+                            if (taps == true)
+                            {
+                                r2.FontSize = 10;
+                                r2.Text = "A243, L.Shkarbanova";
+                            }
+                            else
+                            {
+                                r2.FontSize = 20;
+                                r2.Text = "Võrgud ja Seadm.";
+                                taps = true;
+                            }
+                            
+                            r1 = (Label)s;
+                            if (taps == true)
+                            {
+                                r1.FontSize = 10;
+                                r1.Text = "B221, L.Mihailova";
+                            }
+                            else
+                            {
+                                r1.FontSize = 20;
+                                r1.Text = "Keel ja \n Kirjandus";
+                                taps = true;
+                            }
+                            
+                            r14 = (Label)s;
+                            if (taps == true)
+                            {
+                                r14.FontSize = 10;
+                                r14.Text = "E107, Maria oleinik";
+                            }
+                            else
+                            {
+                                r14.FontSize = 20;
+                                r14.Text = "Mob. Rak.";
+                                taps = true;
+                            }
+                            r3 = (Label)s;
+                            
+                            if (taps == true)
+                            {
+                                r1.FontSize = 10;
+                                r1.Text = "E107, Maria oleinik";
+                                taps = false;
+
+                            }
+                            else
+                            {
+                                r1.FontSize = 20;
+                                r1.Text = "Mob. Rak.";
+                                taps = true;
+                            }
+                        };
+                        r1.GestureRecognizers.Add(tap);
+                        Content = abs;
                     }
-
                 }
-
             }
         }
     }
+}
+
+                
+
+            
+        
+    
